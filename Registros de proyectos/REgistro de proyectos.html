@@ -1,0 +1,32 @@
+REgistro de proyectos
+
+<form action="register_project.php" method="POST">
+    <div class="form-group">
+        <label for="project-name">Nombre del Proyecto</label>
+        <input type="text" id="project-name" name="project_name" placeholder="Nombre..." required>
+    </div>
+    <div class="form-group">
+        <label for="project-director">Director de Proyecto</label>
+        <input type="text" id="project-director" name="project_director" placeholder="Nombre..." required>
+    </div>
+    <div class="form-group">
+        <label for="start-date">Fecha inicio</label>
+        <input type="date" id="start-date" name="start_date" required>
+    </div>
+    <div class="form-group">
+        <label for="end-date">Fecha fin</label>
+        <input type="date" id="end-date" name="end_date" required>
+    </div>
+    <div class="form-group">
+        <label for="team">Equipo</label>
+        <input type="text" id="team" name="team" placeholder="Miembros">
+    </div>
+    <div class="form-group">
+        <label for="status">Estado</label>
+        <select id="status" name="status">
+            <option value="Activo">Activo</option>
+            <option value="Desactivado">Desactivado</option>
+        </select>
+    </div>
+    <button type="submit" class="create-button">Registrar Proyecto</button>
+</form>
