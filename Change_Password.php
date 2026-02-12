@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Workbench&display=swap" rel="stylesheet">
     <link rel="preload" href="css/estilos.css" as="style">
     <link rel="stylesheet" href="css/estilos.css ">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body class="fondo_password">
     <main>
@@ -64,7 +66,7 @@
     
         <!--Pie de la pagina-->
         <footer class="footer">
-            <P>Todos los derechos reservados <span>APROY</span></P>
+            <P>Todos los derechos reservados <span>APROY V - BETA</span></P>
         </footer>
     
 </body>

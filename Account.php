@@ -14,9 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Workbench&display=swap" rel="stylesheet">
     <link rel="preload" href="css/estilos.css" as="style">
     <link rel="stylesheet" href="css/estilos.css ">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
-
+<body>
 <main>
     <div class="Container_register">
         <!--Imagen de Account-->
@@ -32,7 +34,7 @@
 
 
 
-            <form action="register.php" method="POST">
+            <form action="register.php" method="POST" onsubmit="return validarFormulario();">
                 <fieldset>
                     <legend>Registrarse</legend>
                     <div class="contenedor-campos">
@@ -43,8 +45,8 @@
                         <input class="input-text" type="email" name="aws_correo" placeholder="Ingresa correo">
                         <label>Password:</label>
                         <input class="input-text" type="password" name="aws_password" placeholder="Ingresa password">
-                        <label>Confirmar Password:</label>
-                        <input class="input-text" type="password" name="confirm_password" placeholder="Confirmar password">
+                        <!-- <label>Confirmar Password:</label>
+                        <input class="input-text" type="password" name="confirm_password" placeholder="Confirmar password"> -->
                     </div>
 
                     <div class="alinear-derecha flex campo">
@@ -70,13 +72,29 @@
 
     </div>
 </main>
-
+ 
     </div>
+    
 
     <!--Pie de la pagina-->
     <footer class="footer">
-        <P>Todos los derechos reservados <span>APROY</span></P>
+        <P>Todos los derechos reservados <span>APROY V - BETA</span></P>
     </footer>
+
+    <script>
+        function validarFormulario() {
+            const nombre = document.getElementById('aws_nombre').value.trim();
+            const correo = document.getElementById('aws_correo').value.trim();
+            const password = document.getElementById('aws_password').value.trim();
+            // const confirmPassword = document.getElementById('confirm_password').value.trim();
+
+            if (!nombre || !correo || !password) {
+                alert("Por favor, completa todos los campos antes de registrarte.");
+                return false; 
+                }
+            return true; 
+        }
+    </script>
 
 </body>
 
